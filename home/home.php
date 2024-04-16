@@ -51,7 +51,7 @@ Integrating UI with backend for a seamless, efficient  logistics website.</p>
                       
                      
                       <li>
-                          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                          <a href="https://github.com/anuj-rishu" target={blank} class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                         
 
                               <i class="  w-5 h-5 fab fa-github"></i>
@@ -59,7 +59,7 @@ Integrating UI with backend for a seamless, efficient  logistics website.</p>
                           </a>
                       </li>
                       <li>
-                          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                          <a href="https://www.linkedin.com/in/anuj-rishu/" target={blank} class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                              
                               <i class="w-5 h-5 fab fa-linkedin"></i>
                           </a>
@@ -79,7 +79,7 @@ Integrating UI with backend for a seamless, efficient  logistics website.</p>
                   <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">Back-end optimized for seamless performance by app developer.</p>
                   <ul class="flex space-x-4 sm:mt-0">
                   <li>
-                          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                          <a href="https://github.com/rjk51"  target={blank} class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                         
 
                               <i class="  w-5 h-5 fab fa-github"></i>
@@ -87,7 +87,7 @@ Integrating UI with backend for a seamless, efficient  logistics website.</p>
                           </a>
                       </li>
                       <li>
-                          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                          <a href="https://www.linkedin.com/in/ayaanrajak/" target={blank} class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                              
                               <i class="w-5 h-5 fab fa-linkedin"></i>
                           </a>
@@ -107,7 +107,7 @@ Integrating UI with backend for a seamless, efficient  logistics website.</p>
                   <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400"> Worked on: order tracking, inventory, auth, payments. Backend for seamless operations.</p>
                   <ul class="flex space-x-4 sm:mt-0">
                   <li>
-                          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                          <a href="https://github.com/adityaxdubey" class="text-gray-500 hover:text-gray-900 dark:hover:text-white " target={blank}>
                         
 
                               <i class="  w-5 h-5 fab fa-github"></i>
@@ -115,7 +115,7 @@ Integrating UI with backend for a seamless, efficient  logistics website.</p>
                           </a>
                       </li>
                       <li>
-                          <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                          <a href="https://www.linkedin.com/in/adityaxdubey/" target={blank} class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                              
                               <i class="w-5 h-5 fab fa-linkedin"></i>
                           </a>

@@ -16,7 +16,7 @@
 <body>
 <footer class="bg-grey-600 rounded-lg mt-20  m-4">
     <div class="w-full mx-auto max-w-screen-xl p-4 flex flex-col items-center justify-center">
-        <span class="text-sm text-gray-500 text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Swift Logestic Limted </a>. All Rights Reserved.
+        <span class="text-sm text-gray-500 text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">Swift Logestic Limted </a>. All Rights Reserved.
         </span>
         <span class="text-sm text-gray-500 text-center dark:text-gray-400 mt-2">Crafted with ❤️ by Dream Weaver Squad</span>
     </div>

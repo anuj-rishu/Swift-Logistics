@@ -31,8 +31,8 @@ if (isset($_SESSION['uid'])) {
 
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="../images/logo.png" class="h-8" alt="Flowbite Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Swift Logestic</span>
     </a>
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
@@ -82,9 +82,9 @@ if (isset($_SESSION['uid'])) {
 
 <hr>
 
-<div class="flex mt-20 flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+<div class="flex mt-15 flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
       <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-          <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo">
+          <img class="w-8 h-8 mr-2" src="../images/logo.png" alt="logo">
           Swift Logestic Limted  Admin Login
       </a>
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -132,7 +132,7 @@ if (isset($_SESSION['uid'])) {
 
   <footer class="bg-grey-600 rounded-lg mt-20  m-4">
     <div class="w-full mx-auto max-w-screen-xl p-4 flex flex-col items-center justify-center">
-        <span class="text-sm text-gray-500 text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Swift Logestic Limted </a>. All Rights Reserved.
+        <span class="text-sm text-gray-500 text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">Swift Logestic Limted </a>. All Rights Reserved.
         </span>
         <span class="text-sm text-gray-500 text-center dark:text-gray-400 mt-2">Crafted with ❤️ by Dream Weaver Squad</span>
     </div>

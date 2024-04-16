@@ -105,9 +105,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 <hr>
 
 <div class="flex mt-[150px] flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-      <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+<a href="../index.php" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
           <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo">
-          Swift Logestic Limted 
+          Swift Logistics Limted 
       </a>
       <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
           <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -178,7 +178,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 <footer class="bg-grey-600 rounded-lg mt-20  m-4">
     <div class="w-full mx-auto max-w-screen-xl p-4 flex flex-col items-center justify-center">
-        <span class="text-sm text-gray-500 text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Swift Logestic Limted </a>. All Rights Reserved.
+        <span class="text-sm text-gray-500 text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">Swift Logestic Limted </a>. All Rights Reserved.
         </span>
         <span class="text-sm text-gray-500 text-center dark:text-gray-400 mt-2">Crafted with ❤️ by Dream Weaver Squad</span>
     </div>

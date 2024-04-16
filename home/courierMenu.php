@@ -31,17 +31,6 @@ $uid = $_SESSION['uid'];
 <body class="bg-gray-900 cover">
 
 
-
-
-
-
-
-
-
-
-
-
-
 <div class="container mx-auto py-8">
     <form action="courierMenu.php" method="POST" enctype="multipart/form-data" class="p-8 rounded-lg shadow-md">
         <div class="container mx-auto py-8">

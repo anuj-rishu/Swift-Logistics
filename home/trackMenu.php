@@ -32,6 +32,7 @@ if(isset($_SESSION['uid'])){
                 <th class="px-4 py-2">Sender Name</th>
                 <th class="px-4 py-2">Receiver Name</th>
                 <th class="px-4 py-2">Receiver Email</th>
+                <th class="px-4 py-2">Delivery Option</th>
                 <th class="px-4 py-2">Action</th>
             </tr>
         </thead>
@@ -71,6 +72,7 @@ if(isset($_SESSION['uid'])){
             <td class="text-gray-100 pt-2"><?php echo $data['sname']; ?></td>
             <td class="text-gray-100 pt-2"><?php echo $data['rname']; ?></td>
             <td class="text-gray-100 pt-2"><?php echo $data['remail']; ?></td>
+            <td class="text-gray-100 pt-2"><?php echo $data['delivery_option']; ?></td>
             <td class="text-blue-500 pt-2 pl-5 pr-5">
                 <a href="updationtable.php?sid=<?php echo $data['c_id']; ?>">Edit</a> ||
                 <a href="deletecourier.php?bb=<?php echo $data['billno']; ?>">Delete</a>||

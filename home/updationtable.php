@@ -114,6 +114,16 @@ include('header.php');
                             <td>Items Image:</td>
                             <td><input  type="file" name="simg" value="<?php echo $data['image'];?>" class="m-2 sm:w-full bg-gray-700 border border-gray-300 py-2 px-4 rounded-lg" type="file" name="simg" class="w-full py-2 px-4 border border-gray-300 rounded-lg"></td>
                         </tr>
+                        <tr class="text-gray-400 uppercase">
+                            <td>Delivery Option:</td>
+                            <td colspan="3">
+                                <select name="delivery_option" class="m-2 sm:w-full bg-gray-700 border border-gray-300 py-2 px-4 rounded-lg">
+                                    <option value="Standard" <?php if ($data['delivery_option'] == 'Standard') echo 'selected'; ?>>Standard Delivery</option>
+                                    <option value="Express" <?php if ($data['delivery_option'] == 'Express') echo 'selected'; ?>>Express Delivery</option>
+                                    <option value="Same_Day" <?php if ($data['delivery_option'] == 'Same_Day') echo 'selected'; ?>>Same Day Delivery</option>
+                                </select>
+                            </td>
+                        </tr>
                         <tr type="hidden" name="idd" value="<?php echo $data['c_id']; ?>" class="text-gray-400 uppercase ">
                             <td colspan="4" class="py-4">
                                 <input type="submit" name="submit" value="Update" 

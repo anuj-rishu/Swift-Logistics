@@ -172,6 +172,14 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`a_id`),
   ADD UNIQUE KEY `email` (`email`);
 
+
+--
+-- Alter for 'delivery_option' column in 'courier' table
+--
+
+ALTER TABLE `courier`
+ADD COLUMN `delivery_option` ENUM('Standard', 'Express', 'Same_Day') DEFAULT 'standard' AFTER `date`;
+
 --
 -- Indexes for table `contacts`
 --

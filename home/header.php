@@ -2,10 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Navbar with Logo Image</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
     .bs-example{
@@ -15,34 +14,83 @@
 </head>
 <body>
 <div class="bs-example">
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a href="home.php" class="navbar-brand">
-            <img src="../images/fcmw.png" height="80" alt="CoolBrand">
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav">
-                <a href="home.php" class="nav-item nav-link active">Home</a>
-                <a href="price.php" class="nav-item nav-link active">Price</a>
-                <a href="courierMenu.php" class="nav-item nav-link">Courier</a>
-                <a href="trackMenu.php" class="nav-item nav-link">Track</a>
-                
-                <a href="profile.php" class="nav-item nav-link">Profile</a>
-                <a href="contactUS.php" class="nav-item nav-link">ContactUs</a>
-                <!-- mailto:premkumar1215225@gmail.com -->
-            </div>
-            <div class="navbar-nav ml-auto">
-                <a href="../admin/logout.php" class="nav-item nav-link">AdminPage</a>
-                <a href="../logout.php" class="nav-item nav-link">LogOut</a>
-            </div>
-        </div>
-    </nav>
-</div>
+
+
+
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="../index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="../images/logo.png" class="h-8" alt="Flowbite Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Swift Logistics</span>
+    </a>
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+       
+
+        <li>
+          <a href="home.php"  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+        </li>
+        <li>
+          <a href="./price.php"  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Price</a>
+        </li>
+        <li>
+          <a href="courierMenu.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Courier</a>
+        </li>
+        <li>
+          <a href="trackMenu.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Track</a>
+        </li>
+
+
+        <li>
+          <a href="profile.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Profile</a>
+        </li>
+        <li>
+          <a  href="../admin/logout.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Admin Page</a>
+        </li>
+       
+        <li>
+          <a href="./contact.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+
+          <li>
+          <a href="../logout.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">LogOut</a>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const button = document.querySelector('[data-collapse-toggle="navbar-default"]');
+    const menu = document.querySelector('#navbar-default');
+
+    button.addEventListener("click", function() {
+      const expanded = button.getAttribute("aria-expanded") === "true" || false;
+      button.setAttribute("aria-expanded", !expanded);
+      menu.classList.toggle("hidden");
+    });
+  });
+</script>
+
+
+</nav>
+<hr>
+
+
+
+
+
+   
 </body>
 </html>
-<?php include('footer.php'); ?>
+
 
   

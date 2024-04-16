@@ -7,6 +7,13 @@ if(isset($_SESSION['uid'])){
     }
 
 ?>
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
 <?php include('header.php');
     include('../dbconnection.php');
     $idd = $_GET['sidd'];
@@ -19,22 +26,42 @@ if(isset($_SESSION['uid'])){
 
     if($stdate==$tddate){
         ?>
-        <h1 style="margin: 100px;background-color:red;text-align:center">Status >> On The Way...</h1>
-        <br/><hr/>
-        <div align='center'>
-        <button onclick="window.location.href='trackMenu.php'" style="background-color:green;height:60px;width:130px;border-radius:15px;cursor:pointer">GoBack</button>
-        </div>
-         <?php 
-    }
-    else{
+      
+
+
+     <body>
+        
+     <div class="flex flex-col items-center justify-center min-h-screen bg-gray-900">
+    <h1 class="text-2xl font-bold text-white animate-pulse">Status >> On The Way...</h1>
+    <hr class="my-4">
+    <button onclick="window.location.href='trackMenu.php'" class="px-6 py-3 mt-4 text-white bg-green-500 rounded-lg cursor-pointer">GoBack</button>
+        </hr>
+
+        <?php 
+        }
+        else{
         ?>
-        <h1 style="margin: 100px;background-color:red;text-align:center">Status >> Items Delivered..<br /><p>HAVE A NICE DAY</p></h1>
-        <br/><hr/>
-        <div align='center'>
-        <button onclick="window.location.href='trackMenu.php'" style="background-color:green;height:60px;width:130px;border-radius:15px;cursor:pointer">GoBack</button>
+
+        <div class="flex flex-col items-center justify-center min-h-screen bg-gray-900">
+            <h1 class="text-2xl font-bold text-white">Status >> Items Delivered..<br /><p>HAVE A NICE DAY</p></h1>
+            <hr class="my-4">
+            <button onclick="window.location.href='trackMenu.php'" class="px-6 py-3 mt-4 text-white bg-green-500 rounded-lg cursor-pointer">GoBack</button>
         </div>
+     </body>
+
+      
+     
         <?php
+
+        
+
+        
     }
 ?>
+
+<?php include('footer.php'); ?>
+            
+      
+     
 
 

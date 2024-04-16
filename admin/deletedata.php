@@ -13,24 +13,30 @@ if(isset($_SESSION['uid'])){
 include('head.php');
 ?>
 
-<div class="admintitle">
-    <div>
-    <h5 ><a href="dashboard.php" style="float: left; margin-left:20px; color:aliceblue;">BackToDashboard</a></h5>
-    <h5 ><a href="logout.php" style="float: right; margin-right:20px; color:aliceblue;">LogOut</a></h5>
-    </div>
-    <h1 align='center' style="text-shadow: 0.1em 0.1em 0.15em #f9829b;">Search Data Information</h1>
-</div>
 
-<div style="overflow-x:auto;">
-<table width='80%' border="1px solid" style="margin-left: auto; margin-right:auto; margin-top:30px; font-weight:bold;border-spacing: 5px 5px;">
-    <tr style="background-color: indigo;">
-        <th>No.</th>
-        <th>Items Image</th>
-        <th>Sender Name</th>
-        <th>Receiver Name</th>
-        <th>Sender Email</th>
-        <th>Action</th>
-    </tr>
+
+
+
+<link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
+
+
+
+    <body class="bg-gray-900 cover"  > 
+
+
+
+<<div class="overflow-x-auto mt-20">
+    <table class="w-110 border border mt-30 mx-auto font-bold divide-y divide-gray-500">
+        <thead>
+            <tr class="bg-gray-700 text-white text-lg">
+                <th class="px-4  py-2">No.</th>
+                <th class="px-4 py-2">Sender Name</th>
+                <th class="px-4 py-2">Sender Email</th>
+                <th class="px-4 py-2">Receiver Name</th>
+                <th class="px-4 py-2">Action</th>
+            </tr>
+        </thead>
+
 
     <?php
     include('../dbconnection.php');
@@ -48,12 +54,12 @@ include('head.php');
             $count++;
         ?>
         <tr align="center">
-            <td><?php echo $count; ?></td>
-            <td><img src="../dbimages/<?php echo $data['image']; ?>" alt="pic" style="max-width: 100px;"/> </td>
-            <td><?php echo $data['sname']; ?></td>
-            <td><?php echo $data['rname']; ?></td>
-            <td><?php echo $data['semail']; ?></td>
-            <td><a href="datadeleted.php?bb=<?php echo $data['billno']; ?>">Delete</a></td>
+        <td class="text-gray-100 pt-2"  ><?php echo $count; ?></td>
+            <td class="text-gray-100 pt-2" ><img src="../dbimages/<?php echo $data['image']; ?>" alt="pic" style="max-width: 100px;"/> </td>
+            <td class="text-gray-100 pt-2"><?php echo $data['sname']; ?></td>
+            <td class="text-gray-100 pt-2"><?php echo $data['rname']; ?></td>
+            <td class="text-gray-100 pt-2"><?php echo $data['semail']; ?></td>
+            <td class="text-gray-100 pt-2"><a href="datadeleted.php?bb=<?php echo $data['billno']; ?>">Delete</a></td>
         </tr>
         <?php
         }

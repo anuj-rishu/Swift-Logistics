@@ -11,35 +11,40 @@ if(isset($_SESSION['uid'])){
 ?>
 
 <?php
-include('head.php');
-?>
+include('head.php');?>
 
-<style>
-    body {
-        background-image: url('../images/5.png');
-        background-size: cover;
-        }
-</style>
+<link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-<div class="admintitle">
-    <div>
-    <h5 ><a href="../index.php" style="float: left; margin-left:20px; color:aliceblue;">LoginAsUser</a></h5>
-    <h5 ><a href="logout.php" style="float: right; margin-right:20px; color:aliceblue;">LogOut</a></h5>
+
+
+
+
+
+<body class="bg-gray-900">
+
+<div class="text-center text-white py-8">
+    <h1 class="text-4xl font-bold">Welcome To Admin Dashboard</h1>
+
+
+
+</div>
+
+<div class="text-center  mt-20">
+    <div class="bg-gray-700 rounded-lg shadow-lg w-1/2 mx-auto p-4">
+        <a href="deletedata.php" class="block bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mb-4">Delete Data</a>
+        <a href="deleteusers.php" class="block bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete Users</a>
     </div>
-    <h1 align='center' style="text-shadow: 0.1em 0.1em 0.15em #f9829b;">Welcome To Admin Dashbord</h1>
 </div>
-<div align="center" style="margin-top:240px;">
-<form style="position: center;color:lightblue;font-weight:bold;font-size:50px">
-    
-    <!-- <a href="insertdata.php">Insert Data</a><br><br> -->
 
-    <!-- <a href="updatedata.php">Update Data</a><br><br> -->
 
-    <a href="deletedata.php">Delete Data</a><br><br>
-
-    <a href="deleteusers.php">Delete Users</a><br><br>
-</form>
-
+<div class="flex items-center justify-center mt-10">
+    <a href="../home/home.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-flex items-center">
+        <i class="fas fa-arrow-left mr-2"></i> Home
+    </a>
 </div>
+
+
+<?php include('../home/footer.php'); ?>
 </body>
 </html>

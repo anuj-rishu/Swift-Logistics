@@ -106,6 +106,16 @@ $uid = $_SESSION['uid'];
                             <td><input class="m-2 sm:w-full bg-gray-700 border border-gray-300 py-2 px-4 rounded-lg" type="file" name="simg" class="w-full py-2 px-4 border border-gray-300 rounded-lg"></td>
                         </tr>
                         <tr class="text-gray-400 uppercase">
+                            <td>Delivery Option:</td>
+                            <td colspan="3">
+                                <select name="delivery_option" class="m-2 sm:w-full bg-gray-700 border border-gray-300 py-2 px-4 rounded-lg">
+                                    <option value="Standard">Standard Delivery</option>
+                                    <option value="Express">Express Delivery</option>
+                                    <option value="Same_Day">Same Day Delivery</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="text-gray-400 uppercase">
                             <td colspan="4" class="py-4">
                                 <input type="submit" name="submit" value="Place Order"
                                     class=" mt-10 bg-blue-500 text-white py-2 px-8 rounded-lg cursor-pointer">
@@ -141,13 +151,14 @@ if (isset($_POST['submit'])) { //if we'll not give this,it'will submit from with
     $wgt = $_POST['wgt'];
     $billn = $_POST['billno'];
     $originalDate = $_POST['date'];
+    $delivery_option = $_POST['delivery_option'];
     $newDate = date("Y-m-d", strtotime($originalDate));
     $imagenam = $_FILES['simg']['name'];
     $tempnam = $_FILES['simg']['tmp_name'];
 
     move_uploaded_file($tempnam, "../dbimages/$imagenam");
 
-    $qry = "INSERT INTO `courier` (`sname`, `rname`, `semail`, `remail`, `sphone`, `rphone`, `saddress`, `raddress`, `weight`, `billno`, `image`,`date`,`u_id`) VALUES ('$sname', '$rname', '$semail', '$remail', '$sphone', '$rphone', '$sadd', '$radd', '$wgt', '$billn', '$imagenam', '$newDate','$uid');";
+    $qry = "INSERT INTO `courier` (`sname`, `rname`, `semail`, `remail`, `sphone`, `rphone`, `saddress`, `raddress`, `weight`, `billno`, `image`,`date`,`u_id`, `delivery_option`) VALUES ('$sname', '$rname', '$semail', '$remail', '$sphone', '$rphone', '$sadd', '$radd', '$wgt', '$billn', '$imagenam', '$newDate','$uid', '$delivery_option');";
     $run = mysqli_query($dbcon, $qry);
 
     // $trackqry= "INSERT INTO `track` (`u_id`, `c_id`) VALUES ('$uid', 'LAST_INSERT_ID()')";

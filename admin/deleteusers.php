@@ -12,22 +12,24 @@
 <?php
 include('head.php');
 ?>
+<link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
 
-<div class="admintitle">
-    <div>
-    <h5 ><a href="dashboard.php" style="float: left; margin-left:20px; color:aliceblue;">BackToDashboard</a></h5>
-    <h5 ><a href="logout.php" style="float: right; margin-right:20px; color:aliceblue;">LogOut</a></h5>
-    </div>
-    <h1 align='center' style="text-shadow: 0.1em 0.1em 0.15em #f9829b;">Showing All Users</h1>
-</div>
-<div style="overflow-x:auto;">
-<table width='80%' border="1px solid" style="margin-left: auto; margin-right:auto; margin-top:30px; font-weight:bold;border-collapse: collapse;">
-    <tr style="background-color: indigo;">
-        <th>No.</th>
-        <th>Users Name</th>
-        <th>Email Id</th>
-        <th>Action</th>
-    </tr>
+
+
+    <body class="bg-gray-900 cover"  > 
+
+
+
+<<div class="overflow-x-auto mt-20">
+    <table class="w-[750px] border border mt-30 mx-auto font-bold divide-y divide-gray-500">
+        <thead>
+            <tr class="bg-gray-700 text-white text-lg">
+                <th class="px-4  py-2">No.</th>
+                <th class="px-4 py-2">Users Name</th>
+                <th class="px-4 py-2">Email Id</th>
+                <th class="px-4 py-2">Action</th>
+            </tr>
+        </thead>
     <?php
 
         include('../dbconnection.php');
@@ -45,10 +47,10 @@ include('head.php');
                 $count++;
             ?>
             <tr align="center">
-                <td><?php echo $count; ?></td>
-                <td><?php echo $data['name']; ?></td>
-                <td><?php echo $data['email']; ?></td>
-                <td><a href="usersdeleted.php?emm=<?php echo $data['email']; ?>">DeleteUser</a></td>
+                <td class="text-gray-100 pt-2"  ><?php echo $count; ?></td>
+                <td class="text-gray-100 pt-2" ><?php echo $data['name']; ?></td>
+                <td class="text-gray-100 pt-2"><?php echo $data['email']; ?></td>
+                <td class="text-gray-100 pt-2"><a href="usersdeleted.php?emm=<?php echo $data['email']; ?>">DeleteUser</a></td>
             </tr>
             <?php
             }

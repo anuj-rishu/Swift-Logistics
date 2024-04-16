@@ -1,26 +1,25 @@
 <!-- copyright and contactUs fixed footer -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+
 <style>
-.footer {
-    position: fixed;
-    width: 100%;
-    text-align: center;
-    
-    bottom: 0;
-    background-color: #2ab7ca;
-    color: white;
-}
+    .bs-example{
+        margin: 0;
+    }
 </style>
 </head>
 <body>
-<footer class="footer">
-
-  <p style="margin-top: 4px;margin-bottom:-10px">Copyright © 2020 Designed By Himanshu Soni and Love Raj</p><br>
-  <a href="mailto:premkumar1215225@gmail.com" style="color:brown">ContactUs</a>
-
+<footer class="bg-grey-600 rounded-lg mt-20  m-4">
+    <div class="w-full mx-auto max-w-screen-xl p-4 flex flex-col items-center justify-center">
+        <span class="text-sm text-gray-500 text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Swift Logestic Limted </a>. All Rights Reserved.
+        </span>
+        <span class="text-sm text-gray-500 text-center dark:text-gray-400 mt-2">Crafted with ❤️ by Dream Weaver Squad</span>
+    </div>
 </footer>
 
 </body>

@@ -16,39 +16,85 @@ include('header.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.tailwindcss.com"></script>
     <title>Pricing</title>
 </head>
-<body>
-    <table width='30%' border="5px solid" style="margin-top:30px;margin-left:auto ;margin-right:auto ;font-weight:bold;border-spacing: 5px 5px;border-collapse: collapse;">
-    <tr style="background-color: green;font-size:30px">
-    <th>Weight in Kg</th><th>Price</th>
-    </tr>
-    <tr>
-    <td>0-1</td><td>120</td>
-    </tr>
-    <tr>
-    <td>1-2</td><td>200</td>
-    </tr>
-    <tr>
-    <td>2-4</td><td>250</td>
-    </tr>
-    <tr>
-    <td>4-5</td><td>300</td>
-    </tr>
-    <tr>
-    <td>5-7</td><td>400</td>
-    </tr>
-    <tr>
-    <td>7-above</td><td>500</td>
-    </tr>
+<body class="bg-gray-900 cover"  > 
+
+
+
+
+<div class="relative overflow-x-auto mt-20 flex justify-center">
+    <table class="w-3/4 text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mx-auto">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                Weight In kg
+                </th>
+            
+                <th scope="col" class="px-6 py-3">
+                    Price
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    0-1
+                </th>
+                <td class="px-6 py-4">
+                    120
+                </td>
+               
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    1-2
+                </th>
+                <td class="px-6 py-4">
+                200
+                </td>
+               
+            </tr>
+
+
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                 2-3
+                </th>
+                <td class="px-6 py-4">
+                250
+                </td>
+               
+            </tr>
+            
+            </tr>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    2-4
+                </th>
+                <td class="px-6 py-4">
+                400
+                </td>
+               
+            </tr>
+            <tr class="bg-white dark:bg-gray-800">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                   4-5
+                </th>
+                <td class="px-6 py-4">
+                    500
+                </td>
+               
+            </tr>
+        </tbody>
     </table>
-    <h3 align="center" style="margin-top:20px;"> As per your courier's weight pay the amount on:</h3>
-    <div style="margin-left:45% ;margin-right:auto ;font-weight:bold;">
-    <ol>
-    <li>UPI: abcd@sbi.com</li>
-    <li>GPay: 6362786223</li>
-    <li>PhnPay: 3565656555</li>
-    </ol>
-    </div>
+</div>
+
+
+
+
+
+<?php include('footer.php'); ?>
 </body>
 </html>

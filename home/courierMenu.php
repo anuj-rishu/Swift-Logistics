@@ -91,6 +91,13 @@ $uid = $_SESSION['uid'];
                             <td><input type="text" name="raddress" placeholder="Receiver address" required
                             class="m-2 sm:w-full bg-gray-700 border border-gray-300 py-2 px-4 rounded-lg"></td>
                         </tr>
+                        <tr class="text-gray-400 uppercase">
+                        <td>Insurance Amount:</td>
+                        <td><input type="number" name="coverage_amount" placeholder="Enter coverage amount" required class = "m-2 sm:w-full bg-gray-700 border border-gray-300 py-2 px-4 rounded-lg"></td>
+
+                        <td>Package ID:</td>
+                        <td><input type="number" name="package_id" placeholder="Enter package ID"required class="m-2 sm:w-full bg-gray-700 border border-gray-300 py-2 px-4 rounded-lg"></td>
+                       </tr>
                         <!-- <tr>
                             <td colspan="4" class="py-2">
                                
@@ -100,7 +107,7 @@ $uid = $_SESSION['uid'];
                             <td>Weight:</td>
                             <td>
                             <select class="m-2 sm:w-full bg-gray-700 border border-gray-300 py-2 px-4 rounded-lg" id="weight" name="wgt" required class="m-2 sm:w-full bg-gray-700 border border-gray-300 py-2 px-4 rounded-lg">
-            <option value="120">0-1 kg</option>
+            <option value="1">0-1 kg</option>
             <option value="200">1-2 kg</option>
             <option value="250">2-3 kg</option>
             <option value="400">3-4 kg</option>
@@ -108,8 +115,6 @@ $uid = $_SESSION['uid'];
         </select>
                             
                             
-                           
-
                             <td>Comment:</td>
                             <td><input type="text" name="billno" placeholder="comment" required
                            class="m-2 sm:w-full bg-gray-700 border border-gray-300 py-2 px-4 rounded-lg"></td>
@@ -140,28 +145,13 @@ $uid = $_SESSION['uid'];
                 </table>
             </div>
         </form>
-
-
-        <?php
-if (isset($_POST['submit'])) {
-    // Your existing PHP code
-
-    // Get the Razorpay payment id
-    $razorpay_payment_id = $_POST['razorpay_payment_id'];
-
-    // You can store the $razorpay_payment_id in your database
-}
-?>
-    </div>
-    </form>
-
-    <?php include('footer.php'); ?>
+       
 </body>
 
 <script>
 document.getElementById('place-order').onclick = function(e){
     var options = {
-        "key": "rzp_live_mlYGfF84FECF4m", // Enter the Key ID generated from the Dashboard
+        "key": "rzp_live_u0zp8W3R8gobB9", // Enter the Key ID generated from the Dashboard
         "amount": document.getElementById('weight').value * 100, // Amount is in currency subunits. Hence, we multiply by 100
         "currency": "INR",
         "name": "Swift Logistics",
@@ -217,6 +207,9 @@ if (isset($_POST['submit'])) { //if we'll not give this,it'will submit from with
     $billn = $_POST['billno'];
     $originalDate = $_POST['date'];
     $delivery_option = $_POST['delivery_option'];
+    $coverage_amount = $_POST['coverage_amount'];
+    $package_id = $_POST['package_id'];
+    $razorpay_payment_id = $_POST['razorpay_payment_id'];
     $newDate = date("Y-m-d", strtotime($originalDate));
     $imagenam = $_FILES['simg']['name'];
     $tempnam = $_FILES['simg']['tmp_name'];
@@ -225,11 +218,13 @@ if (isset($_POST['submit'])) { //if we'll not give this,it'will submit from with
 
     $qry = "INSERT INTO `courier` (`sname`, `rname`, `semail`, `remail`, `sphone`, `rphone`, `saddress`, `raddress`, `weight`, `billno`, `image`,`date`,`u_id`, `delivery_option`) VALUES ('$sname', '$rname', '$semail', '$remail', '$sphone', '$rphone', '$sadd', '$radd', '$wgt', '$billn', '$imagenam', '$newDate','$uid', '$delivery_option');";
     $run = mysqli_query($dbcon, $qry);
+    $insurance_query = "INSERT INTO insurance (coverage_amount, package_id) VALUES ('$coverage_amount', '$package_id')";
+    $insurance_run = mysqli_query($dbcon, $insurance_query);
 
     // $trackqry= "INSERT INTO `track` (`u_id`, `c_id`) VALUES ('$uid', 'LAST_INSERT_ID()')";
     //$runtrack = mysqli_query($dbcon, $trackqry);
 
-    if ($run == true) {
+    if ($insurance_run==true&&$run == true) {
 
     ?> <script>
             alert('Order Placed Successfully :)');

@@ -4,8 +4,7 @@ Swift Logistic is a web application built using PHP and SQL, aimed at managing l
 
 ## Contributors
 
-- **Anuj**
-- **Rishu Tiwari**
+- **Anuj Rishu Tiwari**
 - **Ayaan Rajak**
 - **Aditya Dubey**
 

@@ -64,6 +64,19 @@ INSERT INTO `admin` (`a_id`, `email`, `name`, `pnumber`) VALUES
 
 -- --------------------------------------------------------
 
+
+
+CREATE TABLE insurance (
+  insurance_id int(11) NOT NULL AUTO_INCREMENT,
+  coverage_amount int(11) DEFAULT NULL,
+  package_id int(11) DEFAULT NULL,
+  PRIMARY KEY (insurance_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE courier
+  ADD COLUMN insurance_id int(11) DEFAULT NULL,
+  ADD CONSTRAINT courier_ibfk_2 FOREIGN KEY (insurance_id) REFERENCES insurance (insurance_id);
+
 --
 -- Table structure for table `contacts`
 --

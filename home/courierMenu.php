@@ -151,7 +151,7 @@ if (isset($_POST['submit'])) {
 <script>
 document.getElementById('place-order').onclick = function(e){
     var options = {
-        "key": "rzp_live_mlYGfF84FECF4m", // Enter the Key ID generated from the Dashboard
+        "key": "razorpay_key_id", // Enter the Key ID generated from the Dashboard
         "amount": document.getElementById('weight').value * 100, // Amount is in currency subunits. Hence, we multiply by 100
         "currency": "INR",
         "name": "Swift Logistics",

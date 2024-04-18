@@ -147,7 +147,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
 
                   <p class="text-sm font-light text-gray-500 dark:text-gray-400">
-                      <a href="register.php" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Forget Your Password</a>
+                      <a href="reset.php" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Forget Your Password</a>
                   </p>
                 
 
